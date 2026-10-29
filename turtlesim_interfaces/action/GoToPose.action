@@ -1,0 +1,8 @@
+# Goal
+TargetPoint target
+---
+# Result
+bool success
+---
+# Feedback
+float64 distance_remaining
