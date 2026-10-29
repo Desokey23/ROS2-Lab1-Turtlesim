@@ -22,17 +22,34 @@ colcon build --packages-select turtlesim_interfaces
 source install/setup.bash
 colcon build --packages-select turtlesim_assignment
 source install/setup.bash
+```
 
 ## Commands to move
-launch: ros2 launch turtlesim_assignment main.launch.py
-Manual Control: ros2 run turtlesim turtle_teleop_key
-Reset:  ros2 service call /reset_turtle_custom std_srvs/srv/Empty
-go to point:  ros2 action send_goal /go_to_pose turtlesim_interfaces/action/GoToPose "{target: {x: (x position), y: (y position), yaw: (angle in radian)}}" -f
-Draw Square:  ros2 action send_goal /draw_square turtlesim_interfaces/action/Square "{side_length: (length)}" -f
-Change Speed:  ros2 service call /set_speeds turtlesim_interfaces/srv/SetSpeeds "{max_linear_speed: 1.0, max_angular_speed: 1.0}"
-Read the position:  ros2 topic echo /turtle1/pose
-Show Parameters in system:  ros2 param list
-Read the Speed:  ros2 param get /go_to_pose_server max_linear_speed
-Bag Record:  ros2 bag record /turtle1/cmd_vel /turtle1/pose
-to run the record:  ros2 bag play (file name)
+all commands , we use in our project 
+```bash
+#launch:
+ros2 launch turtlesim_assignment main.launch.py
+#Manual Control:
+ros2 run turtlesim turtle_teleop_key
+#Reset:
+ros2 service call /reset_turtle_custom std_srvs/srv/Empty
+#go to point:
+ros2 action send_goal /go_to_pose turtlesim_interfaces/action/GoToPose "{target: {x: (x position), y: (y position), yaw: (angle in radian)}}" -f
+#Draw Square:
+ros2 action send_goal /draw_square turtlesim_interfaces/action/Square "{side_length: (length)}" -f
+#Change Speed:
+ros2 service call /set_speeds turtlesim_interfaces/srv/SetSpeeds "{max_linear_speed: 1.0, max_angular_speed: 1.0}"
+#Read the position:
+ros2 topic echo /turtle1/pose
+#Show Parameters in system:
+ros2 param list
+#Read the Speed:
+ros2 param get /go_to_pose_server max_linear_speed
+#Bag Record:
+ros2 bag record /turtle1/cmd_vel /turtle1/pose
+#to run the record:
+ros2 bag play (file name)
+```
+
+
 
