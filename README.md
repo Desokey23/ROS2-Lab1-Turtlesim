@@ -25,7 +25,7 @@ source install/setup.bash
 ```
 
 ## Commands to move
-all commands , we use in our project 
+all commands , to move the turtle and fully controll 
 ```bash
 #launch:
 ros2 launch turtlesim_assignment main.launch.py
